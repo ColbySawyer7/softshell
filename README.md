@@ -1,4 +1,4 @@
-# softshell
+# Softshell
 SoftShell OS, A streamlined minimized OS written in Rust
 
 
@@ -17,4 +17,10 @@ cargo rustc -- -C link-arg=-nostartfiles
 cargo rustc -- -C link-args="/ENTRY:_start /SUBSYSTEM:console"
 # macOS
 cargo rustc -- -C link-args="-e __start -static -nostartfiles"
+`
+
+## Switching to Nighly for features
+`
+rustup override set nightly  
+cargo build --target x86_64-softshell.json      
 `
